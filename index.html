@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KapdeWalla | Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/e37f90b971.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-dark " href="#">KapdeWalla</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto gap-3">
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold " href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Men</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Women</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Accessories</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <div class="input-group rounded-pill bg-light px-2 py-1" style="width: 180px;">
+          <input type="text" class="form-control border-0 bg-transparent" placeholder="Search...">
+          <span class="input-group-text border-0 bg-transparent"><i class="fas fa-search"></i></span>
+        </div>
+        <a href="#" class="text-dark position-relative">
+          <i class="fas fa-shopping-bag fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
+        </a>
+        <a href="#" class="btn btn-outline-dark btn-sm rounded-pill ">Login</a>
+        <button id="themeToggle" class="btn btn-outline-dark btn-sm rounded-pill floating-icon">🌗 Dark Mode</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">🛒 Explore Our Products</h2>
+
+    <!-- Filters -->
+    <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+      <input type="text" id="searchInput" placeholder="Search products..." class="form-control w-50">
+      <select id="categoryFilter" class="form-select w-auto">
+        <option value="All">All Categories</option>
+        <option value="Men">Men</option>
+        <option value="Women">Women</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+      <select id="sortPrice" class="form-select w-auto">
+        <option value="">Sort By</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="row g-4"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProductName"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalProductImage" src="" alt="Product" class="img-fluid mb-3">
+          <p><strong>Category:</strong> <span id="modalProductCategory"></span></p>
+          <p><strong>Price:</strong> ₹<span id="modalProductPrice"></span></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, fuga!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="bg-white text-dark py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="fw-bold">KapdeWalla</h5>
+        <p>Premium quality & timeless fashion delivered to your doorstep.</p>
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-bold">Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">About</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Categories</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Men</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Women</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Subscribe</h6>
+        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+        <button class="btn btn-dark w-100">Subscribe</button>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center">© 2025 KapdeWalla.com</div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-warning rounded-circle px-3 py-2" title="Back to Top">↑</button>
+<button id="backToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

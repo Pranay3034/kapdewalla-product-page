@@ -1,0 +1,188 @@
+body {
+      background-color: #f8f9fa;
+    }
+.card-img-top {
+      object-fit: cover;
+      height: 200px;
+    }
+
+
+/* ========= GENERAL ========= */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* ========= NAVBAR & FOOTER ========= */
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffc107;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* ========= DARK MODE ========= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+}
+
+body.dark-mode .text-dark 
+{
+  color: #fff !important;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* ========= BUTTONS ========= */
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-dark {
+  background-color: #212529;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+body.dark-mode .btn-dark {
+  background-color: #f5f5f5;
+  color: #121212;
+}
+
+body.dark-mode .btn-dark:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Fix outline buttons in dark mode */
+body.dark-mode .btn-outline-dark {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #ffffff !important;
+  color: #121212 !important;
+}
+
+
+/* ========= PRODUCT CARD STYLING ========= */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+/* ========= BACK TO TOP ========= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  display: none;
+}
+
+#backToTop:hover {
+  background-color: #ff9800;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+body.dark-mode #backToTop {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode #backToTop:hover {
+  background-color: #555;
+}
+
+/* ========= PRODUCT MODAL ========= */
+.modal-content {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* ========= INPUTS ========= */
+.input-group input:focus,
+.form-control:focus {
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.4);
+  border-color: #ffc107;
+  outline: none;
+}
+
+body.dark-mode .form-control {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
